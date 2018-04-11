@@ -1,6 +1,10 @@
 function checkUsersValid(goodUsers) {
     return function allUsersValid(submittedUsers) {
-        // SOLUTION GOES HERE
+        submittedUsers.every(function(item){
+            goodUsers.some(function(dude){
+                dude.id == item.id;
+            })
+        });
     };
 }
 
