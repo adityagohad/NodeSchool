@@ -1,11 +1,11 @@
 function checkUsersValid(goodUsers) {
     return function allUsersValid(submittedUsers) {
-        submittedUsers.every(function(item){
-            goodUsers.some(function(dude){
-                dude.id == item.id;
+        return submittedUsers.every(function(item){
+            return goodUsers.some(function(dude){
+                return dude.id == item.id
             })
         });
     };
-}
+  }
 
 module.exports = checkUsersValid
